@@ -27,7 +27,8 @@ instead of downloading. `fetch_hf.py` caches each tag's API listing in `data/raw
 
 ## Results
 
-See [FINDINGS.md](FINDINGS.md) for the headline numbers and caveats.
+- [ANALYSIS.md](ANALYSIS.md): findings, numbers and caveats for the blog post
+- [METHOD.md](METHOD.md): exactly how the data and figures are produced
 
 ## Figures
 
