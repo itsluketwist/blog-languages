@@ -10,7 +10,7 @@ analysis of natural languages on Hugging Face.
 |---|---|---|
 | Developers per language (the "speakers") | [GitHub Innovation Graph](https://github.com/github/innovationgraph) `languages.csv` | Unique developers pushing code in each language in the latest quarter, summed over economies. Only economy/language pairs with ≥100 developers are published, so small languages are undercounted. |
 | Language names and aliases | [GitHub Linguist](https://github.com/github-linguist/linguist) `languages.yml` | Only `type: programming`; build/config formats (Dockerfile, Makefile, …) are dropped and SQL dialects are folded into one "SQL" row. |
-| Models and datasets per language | Hugging Face Hub API | A repo counts for a language when it has a tag matching the language's name or an alias. Ambiguous tags (`go`, `r`, `julia`, natural-language codes such as `lua` or `ts`) only count alongside a code tag. |
+| Models and datasets per language | Hugging Face Hub API | A repo counts for a language when it has a tag matching the language's name or an alias. Ambiguous tags (`go`, `r`, `rust`, `julia`, natural-language codes such as `lua` or `ts`) only count alongside a code tag, and natural-language-code tags don't count on multilingual models. Languages whose names mostly mean something else on the Hub (CUDA, Metal, WebAssembly, …) are left out; see `src/config.py`. |
 
 ## Running it
 
@@ -24,6 +24,10 @@ python plots.py             # -> figures/*.png, data/stats.json, data/residuals_
 
 `build_languages.py` takes `--innovation-graph` and `--linguist` to read local copies
 instead of downloading. `fetch_hf.py` caches each tag's API listing in `data/raw/hf/`.
+
+## Results
+
+See [FINDINGS.md](FINDINGS.md) for the headline numbers and caveats.
 
 ## Figures
 

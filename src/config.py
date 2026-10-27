@@ -19,6 +19,9 @@ EXCLUDED = {
     "Dockerfile", "Makefile", "CMake", "Procfile", "Meson", "QMake", "M4", "M4Sugar",
     "Inno Setup", "NSIS", "BitBake", "GDB", "Module Management System",
     "Filebench WML", "Earthly", "Singularity", "RPC", "Linker Script",
+    # Hack shares the .php extension with PHP, so Linguist credits it with
+    # implausibly many developers (~112k across 96 economies).
+    "Hack",
 }
 
 # SQL dialects are folded into a single "SQL" entry, because on Hugging Face
@@ -70,7 +73,22 @@ AMBIGUOUS = {
     "chuck", "lasso", "rexx", "dafny", "idris", "bluespec", "pony", "racket", "cue",
     "nix", "stata", "sas", "mathematica", "matlab", "ampl", "gams", "modelica", "lilypond",
     "supercollider", "jq", "llvm", "mlir", "webassembly", "wasm", "cuda", "inc", "rake", "posh",
-    "bat", "batch", "envrc", "mysql", "postgresql", "sqlite", "terraform",
+    "bat", "batch", "envrc", "mysql", "postgresql", "sqlite", "terraform", "delphi", "sieve",
+    "flex", "coffee", "smpl", "mumps", "renpy",
+}
+
+# Linguist aliases that on the Hub almost always mean something else (Apple's M2
+# chip and MPS backend, ...). These are never used as tags for the language.
+DROPPED_TAGS = {"m2", "mps", "dcl", "al", "be", "inc"}
+
+# Languages whose names mostly mean something else on the Hub (GPU runtimes, a
+# quantisation method, a benchmark, ...), even on code models, so tag counts can't
+# measure them. They are left out of the analysis rather than reported as zero.
+UNMEASURABLE = {
+    "Cuda", "Metal", "WebAssembly", "Apex", "Arc", "Reason", "Hy", "Io", "Max", "Limbo",
+    "Berry", "Fluent", "Move", "Turing", "Ink", "Cool", "Clean", "Slash", "Logos", "E",
+    "Red", "V", "J", "M", "q", "Sage", "Stan", "Alloy", "Cadence", "Euphoria", "Faust",
+    "FLUX", "AL",
 }
 
 # Tags that mark a model/dataset as being about source code.

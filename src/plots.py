@@ -105,7 +105,10 @@ def zipf_figure(df: pd.DataFrame, callout: str | None) -> dict:
         ranked = out[kind]["ranked"]
         if callout and callout in set(ranked.language):
             r = ranked[ranked.language == callout].iloc[0]
-            ax.annotate(f"Rank {int(r['rank'])}: {callout}", (r["rank"], r[kind]),
+            devs = df.loc[df.language == callout, "developers"].iloc[0]
+            ax.annotate(f"Rank {int(r['rank'])}: {callout}\n{devs / 1000:,.0f}k developers, "
+                        f"{int(r[kind])} {LABELS[kind][:-1] if r[kind] == 1 else LABELS[kind]}",
+                        (r["rank"], r[kind]),
                         xytext=(0.06, 0.18), textcoords="axes fraction",
                         fontsize=12, fontweight="bold", color=UNDER,
                         arrowprops=dict(arrowstyle="-|>", color=UNDER, lw=1.8))
@@ -160,8 +163,12 @@ def scatter_figure(df: pd.DataFrame, kind: str) -> dict:
             label=f"OLS fit (R² = {r2:.2f})", zorder=2)
     ax.axhline(0.8, color=INK_2, lw=0.6, ls=":")
 
-    # Label the highlighted languages, plus the biggest few overall.
-    label = d[(d.group != "mid") | (d.developers >= d.developers.nlargest(6).min())]
+    # Label the highlighted languages and the biggest few overall, but only the
+    # largest few of the many languages sitting on the zero row.
+    on_zero = d[d[kind] == 0]
+    crowded = on_zero.index.difference(on_zero.nlargest(4, "developers").index)
+    label = d[((d.group != "mid") | (d.developers >= d.developers.nlargest(6).min()))
+              & ~d.index.isin(crowded)]
     texts = [ax.text(r.developers, r[kind] if r[kind] > 0 else zero_y, r.language,
                      fontsize=8.5, color=INK) for _, r in label.iterrows()]
     ax.set_xscale("log")
@@ -247,7 +254,11 @@ def main() -> None:
 
     scatter = {kind: scatter_figure(df, kind) for kind in ["models", "datasets"]}
     under = scatter["models"]["under"]
-    zipf = zipf_figure(df, callout=under[0] if under else None)
+    # Callout: the widely used language (100k+ developers) with the fewest models
+    # per developer, like the talk's "Rank 116: Maithili".
+    big = df[(df.models > 0) & (df.developers >= 100_000)]
+    callout = big.loc[(big.developers / big.models).idxmax(), "language"]
+    zipf = zipf_figure(df, callout=callout)
     share_figure(df)
 
     summary = {}

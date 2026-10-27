@@ -19,8 +19,8 @@ import requests
 import yaml
 
 from config import (
-    AMBIGUOUS, DATA, EXCLUDED, EXTRA_TAGS, INNOVATION_GRAPH_URL, LEGACY,
-    LINGUIST_URL, SQL_DIALECTS,
+    AMBIGUOUS, DATA, DROPPED_TAGS, EXCLUDED, EXTRA_TAGS, INNOVATION_GRAPH_URL, LEGACY,
+    LINGUIST_URL, SQL_DIALECTS, UNMEASURABLE,
 )
 
 
@@ -65,7 +65,7 @@ def slug(name: str) -> str:
 def hf_tags(name: str, aliases: list[str]) -> list[str]:
     tags = {name.lower(), slug(name), *(a.lower() for a in aliases)}
     tags.update(EXTRA_TAGS.get(name, []))
-    return sorted(t for t in tags if t)
+    return sorted(t for t in tags if t and t not in DROPPED_TAGS)
 
 
 def main() -> None:
@@ -77,10 +77,11 @@ def main() -> None:
     linguist = yaml.safe_load(read_text(args.linguist))
     devs, period = load_developers(args.innovation_graph)
 
-    # Keep programming languages (plus the SQL dialects), drop build/config formats.
+    # Keep programming languages (plus the SQL dialects), drop build/config formats
+    # and languages that Hub tags can't measure.
     keep = devs[
         ((devs.language_type == "programming") | devs.language.isin(SQL_DIALECTS))
-        & ~devs.language.isin(EXCLUDED)
+        & ~devs.language.isin(EXCLUDED | UNMEASURABLE)
     ].copy()
 
     # Fold SQL dialects into one "SQL" row. Someone writing two dialects is

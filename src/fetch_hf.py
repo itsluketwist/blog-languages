@@ -4,7 +4,9 @@ A model/dataset counts for a language when one of its Hub tags is the language's
 name or an alias (see data/languages.csv). Tags that are ambiguous on their own
 ("go", "r", "julia", "ruby", natural-language codes like "lua" or "ts", ...) only
 count when the repo is also tagged as being about code, or carries another,
-unambiguous programming-language tag.
+unambiguous programming-language tag. Tags that are also natural-language codes
+additionally don't count on repos tagged with several other natural languages
+(multilingual models list "ts" for Tsonga, "be" for Belarusian, ...).
 
 Each tag's raw API listing is cached under data/raw/hf/ so the script can be
 re-run (or resumed after a rate limit) cheaply. Set HF_TOKEN for higher limits.
@@ -23,6 +25,7 @@ from collections import defaultdict
 import pandas as pd
 import requests
 
+from build_languages import natural_language_codes
 from config import CODE_TAGS, DATA
 
 API = "https://huggingface.co/api"
@@ -79,6 +82,7 @@ def count(kind: str, languages: pd.DataFrame, refresh: bool) -> tuple[pd.DataFra
         for r in languages.itertuples()
     }
     unambiguous = {t for lang, tags in tags_of.items() for t in tags if t not in ambiguous_of[lang]}
+    iso_codes = natural_language_codes()
 
     repos: dict[str, dict] = {}
     hits = defaultdict(set)  # language -> repo ids
@@ -95,7 +99,7 @@ def count(kind: str, languages: pd.DataFrame, refresh: bool) -> tuple[pd.DataFra
                 if tag in tags:
                     hits[lang].add(item["id"])
 
-    rows = []
+    rows, counted = [], {}
     for lang, tags in tags_of.items():
         ids, ids_raw = set(), hits[lang]
         for repo_id in ids_raw:
@@ -103,8 +107,13 @@ def count(kind: str, languages: pd.DataFrame, refresh: bool) -> tuple[pd.DataFra
             matched = repo_tags & set(tags)
             if matched - ambiguous_of[lang]:
                 ids.add(repo_id)
-            elif repo_tags & CODE_TAGS or (repo_tags - matched) & unambiguous:
+                continue
+            other_natural = (repo_tags - matched) & iso_codes - {"en"}
+            if matched <= iso_codes and len(other_natural) > 1:
+                continue
+            if repo_tags & CODE_TAGS or (repo_tags - matched) & unambiguous:
                 ids.add(repo_id)
+        counted[lang] = ids
         rows.append({
             "language": lang,
             f"{kind}": len(ids),
@@ -116,7 +125,7 @@ def count(kind: str, languages: pd.DataFrame, refresh: bool) -> tuple[pd.DataFra
     # Context numbers for the write-up: how big is the "code" corner of the Hub?
     summary = {
         f"{kind}_tagged_code": len(fetch_tag(kind, "code", refresh)),
-        f"{kind}_with_any_language": len(set().union(*hits.values())),
+        f"{kind}_with_any_language": len(set().union(*counted.values())),
     }
     print(summary)
     return pd.DataFrame(rows), summary
