@@ -1,5 +1,25 @@
 # blog-languages
 
+<div>
+    <!-- badges from : https://shields.io/ -->
+    <!-- logos available : https://simpleicons.org/ -->
+    <a href="https://lukastwist.com/blog/language-attention/">
+        <img alt="Blog post" src="https://img.shields.io/badge/Blog-Read_the_post-6250d6?style=for-the-badge&logo=rss&logoColor=white" />
+    </a>
+    <a href="https://www.python.org/">
+        <img alt="Python 3" src="https://img.shields.io/badge/Python_3-blue?style=for-the-badge&logo=python&logoColor=white" />
+    </a>
+    <a href="https://github.com/github/innovationgraph">
+        <img alt="GitHub Innovation Graph" src="https://img.shields.io/badge/GitHub-222222?style=for-the-badge&logo=github&logoColor=white" />
+    </a>
+    <a href="https://huggingface.co">
+        <img alt="Hugging Face" src="https://img.shields.io/badge/Hugging_Face-FFCC00?style=for-the-badge&logo=huggingface&logoColor=black" />
+    </a>
+    <a href="https://creativecommons.org/licenses/by/4.0/">
+        <img alt="CC-BY-4.0 License" src="https://img.shields.io/badge/Licence-CC_BY_4.0-yellow?style=for-the-badge&logo=docs&logoColor=white" />
+    </a>
+</div>
+
 How well are programming languages served by open AI models and datasets, relative to
 how many people write them? A programming-language version of Anna Korhonen's EMNLP
 2026 keynote analysis of natural languages on Hugging Face.

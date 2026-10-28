@@ -231,30 +231,15 @@ def zipf_figure(
                 color=UNDER,
                 arrowprops=dict(arrowstyle="-|>", color=UNDER, lw=1.8),
             )
-    title_style = dict(fontsize=17, fontweight="bold")
-    title = fig.suptitle(
-        "Code AI is highly concentrated:",
+    fig.suptitle(
+        "Code AI is highly concentrated",
         x=0.01,
         ha="left",
+        fontsize=17,
+        fontweight="bold",
         color=INK,
-        **title_style,
     )
     fig.tight_layout()
-
-    # the second half of the title is orange, like the python point. matplotlib
-    # can't colour part of one string, so measure where the black part ends and
-    # draw the orange part straight after it
-    fig.canvas.draw()
-    title_box = title.get_window_extent().transformed(fig.transFigure.inverted())
-    fig.text(
-        title_box.x1,
-        title.get_position()[1],
-        " Python is the English of coding",
-        ha="left",
-        va=title.get_va(),
-        color=UNDER,
-        **title_style,
-    )
     add_credit(fig)
     fig.savefig(FIGURES / "zipf.png")
     plt.close(fig)
