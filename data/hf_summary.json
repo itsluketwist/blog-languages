@@ -1,7 +1,11 @@
 {
-  "fetched": "2026-10-27",
-  "models_tagged_code": 14805,
-  "models_with_any_language": 3550,
-  "datasets_tagged_code": 4770,
-  "datasets_with_any_language": 2033
+  "fetched": "2026-10-28",
+  "models_tagged_code": 14837,
+  "models_with_any_language": 2000,
+  "models_converted_removed": 1927,
+  "models_general_over_3_languages": 67,
+  "datasets_tagged_code": 4785,
+  "datasets_with_any_language": 1883,
+  "datasets_converted_removed": 4,
+  "datasets_general_over_3_languages": 56
 }

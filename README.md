@@ -1,29 +1,55 @@
 # blog-languages
 
 How well are programming languages served by open AI models and datasets, relative to
-how many people write them? A programming-language version of the EMNLP 2025 keynote
-analysis of natural languages on Hugging Face.
+how many people write them? A programming-language version of Anna Korhonen's EMNLP
+2025 keynote analysis of natural languages on Hugging Face.
+
+## Inspiration and credit
+
+This project is directly inspired by, and closely follows, the analysis in
+**Anna Korhonen's keynote at EMNLP 2025, "AI for the Many: Starting from the World,
+Not the Model"** (Keynote 3). The talk examined the global AI divide through the lens
+of language, showing how unevenly AI models and datasets are spread across the world's
+languages.
+
+The analysis design here is hers, applied to programming languages instead of natural
+ones:
+- the "highly concentrated" Zipf plot of models and datasets per language, fitted
+  without the top-ranked language, with a "Rank N" callout for a large but
+  under-served language;
+- the speakers-vs-models scatter with an OLS fit, and its "explains only ~X% of the
+  variation" headline;
+- the colour groups (top 5 per speaker bin, under-resourced, dead/legacy languages) and
+  the side panel of takeaways.
+
+Developers stand in for speakers, and GitHub's language data for language censuses.
+Any errors in this adaptation are mine.
 
 ## Data
 
 | What | Source | Notes |
 |---|---|---|
-| Developers per language (the "speakers") | [GitHub Innovation Graph](https://github.com/github/innovationgraph) `languages.csv` | Unique developers pushing code in each language in the latest quarter, summed over economies. Only economy/language pairs with ≥100 developers are published, so small languages are undercounted. |
+| Developers per language (the "speakers") | [GitHub Innovation Graph](https://github.com/github/innovationgraph) `languages.csv` | Unique developers pushing code in each language in 2026 Q1, summed over economies. Only economy/language pairs with ≥100 developers are published, so small languages are undercounted. |
 | Language names and aliases | [GitHub Linguist](https://github.com/github-linguist/linguist) `languages.yml` | Only `type: programming`; build/config formats (Dockerfile, Makefile, …) are dropped and SQL dialects are folded into one "SQL" row. |
-| Models and datasets per language | Hugging Face Hub API | A repo counts for a language when it has a tag matching the language's name or an alias. Ambiguous tags (`go`, `r`, `rust`, `julia`, natural-language codes such as `lua` or `ts`) only count alongside a code tag, and natural-language-code tags don't count on multilingual models. Languages whose names mostly mean something else on the Hub (CUDA, Metal, WebAssembly, …) are left out; see `src/config.py`. |
+| Models and datasets per language | Hugging Face Hub API | A repo counts for a language when it has a tag matching the language's name, an alias or another spelling (no task tags such as `text-to-sql`). Quantised/converted re-uploads (GGUF, MLX, …) are skipped, so each model counts once. Ambiguous tags (`go`, `r`, `rust`, `julia`, natural-language codes such as `lua` or `ts`) only count alongside a code tag, and natural-language-code tags don't count on multilingual models. Languages whose names mostly mean something else on the Hub (CUDA, Metal, WebAssembly, …) are left out; see `src/config.py`. |
 
 ## Running it
 
 ```bash
 pip install -r requirements.txt
-cd src
-python build_languages.py   # -> data/languages.csv
-python fetch_hf.py          # -> data/hf_counts.csv, data/hf_summary.json (set HF_TOKEN for higher rate limits)
-python plots.py             # -> figures/*.png, data/stats.json, data/residuals_*.csv
+python src/build_languages.py   # -> data/languages.csv
+python src/fetch_hf.py          # -> data/hf_counts.csv, data/hf_summary.json
+python src/plots.py             # -> figures/*.png, data/stats.json, data/residuals_*.csv
+pytest tests                    # checks the counting rules
 ```
 
-`build_languages.py` takes `--innovation-graph` and `--linguist` to read local copies
-instead of downloading. `fetch_hf.py` caches each tag's API listing in `data/raw/hf/`.
+The outputs rebuild exactly from the committed files:
+- the sources and quarter are pinned in `src/config.py`;
+- `fetch_hf.py` counts from the committed Hub snapshot `data/hf_snapshot.json.gz`.
+
+Run `python src/fetch_hf.py --refresh` to fetch fresh Hub data and overwrite the
+snapshot (set `HF_TOKEN` for higher rate limits). `build_languages.py` takes
+`--innovation-graph` and `--linguist` to read local copies instead of downloading.
 
 ## Results
 
@@ -34,4 +60,19 @@ instead of downloading. `fetch_hf.py` caches each tag's API listing in `data/raw
 
 - `figures/zipf.png`: rank vs. number of models / datasets per language (log-log)
 - `figures/developers_vs_models.png`, `figures/developers_vs_datasets.png`: developers vs. models, with an OLS fit and highlighted groups
-- `figures/share.png`: share of developers vs. share of models for the most-used languages
+- `figures/share.png`: share of developers vs. share of models and datasets for the most-used languages
+
+## Licence
+
+Everything in this repository (code, figures, data and write-ups) is licensed under
+[Creative Commons Attribution 4.0 International (CC BY 4.0)](LICENSE). Reuse it freely,
+with credit to Luke Twist and this repository.
+
+- **Third-party sources:**
+  - Developer counts come from the [GitHub Innovation Graph](https://github.com/github/innovationgraph)
+    (CC0 1.0).
+  - Language names and aliases come from [GitHub Linguist](https://github.com/github-linguist/linguist)
+    (MIT).
+  - `data/hf_snapshot.json.gz` holds public metadata (repo ids, tags, download and
+    like counts) from the [Hugging Face Hub](https://huggingface.co) API; the
+    repositories themselves belong to their owners.

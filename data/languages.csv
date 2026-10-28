@@ -1,20 +1,20 @@
 language,period,developers,economies,legacy,hf_tags,ambiguous_tags
-JavaScript,2026Q1,5662372,181,False,javascript|js|node|nodejs,js|node
-Python,2026Q1,4109495,160,False,py|py3|python|python3|rusthon,py
-TypeScript,2026Q1,2787317,162,False,ts|typescript,ts
-Shell,2026Q1,2319832,151,False,bash|envrc|nl2bash|sh|shell|shell-commands|shell-script|zsh,bash|envrc|sh
+JavaScript,2026Q1,5662372,182,False,javascript|js|node|nodejs,js|node
+Python,2026Q1,4109495,161,False,py|py3|python|python3|rusthon,py
+TypeScript,2026Q1,2787317,163,False,ts|typescript,ts
+Shell,2026Q1,2319832,152,False,bash|envrc|sh|shell|shell-script|zsh,bash|envrc|sh
 Java,2026Q1,1074838,134,False,java,
 C++,2026Q1,944644,135,False,c++|cplusplus|cpp,cpp
-C,2026Q1,907620,134,False,c|c-language|clang,c|clang
+C,2026Q1,907620,134,False,c|c-language,c
 Batchfile,2026Q1,627941,126,False,bat|batch|batchfile|dosbatch|winbatch,bat|batch
-C#,2026Q1,564606,120,False,c#|c-sharp|cake|cakescript|csharp|dotnet,c#|cake|cakescript|dotnet
+C#,2026Q1,564606,120,False,c#|c-sharp|cake|cakescript|csharp,c#|cake|cakescript
 PHP,2026Q1,559093,134,False,php,
 PowerShell,2026Q1,515689,122,False,posh|powershell|pwsh,posh
 Kotlin,2026Q1,433614,127,False,kotlin,
 Ruby,2026Q1,421014,110,False,jruby|macruby|rake|rb|rbx|ruby,rake|rb|ruby
 Go,2026Q1,393708,101,False,go|golang,go
 Swift,2026Q1,377812,124,False,swift,swift
-SQL,2026Q1,375726,118,False,hiveql|mysql|nl2sql|pl-sql|plpgsql|plsql|postgresql|spider|sql|sqlite|sqlpl|t-sql|text-to-sql|text2sql|tsql,mysql|postgresql|spider|sqlite
+SQL,2026Q1,375726,118,False,hiveql|mysql|pl-sql|plpgsql|plsql|postgresql|sql|sqlite|sqlpl|t-sql|tsql,mysql|postgresql|sqlite
 Rust,2026Q1,317919,92,False,rs|rust,rs|rust
 Objective-C,2026Q1,276290,113,False,obj-c|objc|objective-c|objectivec,
 Lua,2026Q1,249825,89,False,lua,lua
@@ -35,7 +35,7 @@ MATLAB,2026Q1,71342,54,False,matlab|octave,matlab
 Objective-C++,2026Q1,65930,59,False,obj-c++|objc++|objective-c++|objectivec++,
 Cython,2026Q1,64229,61,False,cython|pyrex,
 Fortran,2026Q1,54374,57,True,fortran,
-Solidity,2026Q1,53061,59,False,smart-contract|smart-contracts|solidity,
+Solidity,2026Q1,53061,59,False,solidity,
 Emacs Lisp,2026Q1,49148,47,False,cask|eask|elisp|emacs|emacs lisp|emacs-lisp,emacs
 Gherkin,2026Q1,48148,57,False,cucumber|gherkin,
 Starlark,2026Q1,46539,47,False,bazel|bzl|starlark,bzl
@@ -46,7 +46,7 @@ Tcl,2026Q1,39525,43,False,sdc|tcl|xdc,sdc|tcl|xdc
 Yacc,2026Q1,37073,44,False,yacc,yacc
 Lex,2026Q1,33816,45,False,flex|lex,flex|lex
 Julia,2026Q1,29225,36,False,julia,julia
-Verilog,2026Q1,28539,38,False,rtl|verilog|verilog-generation,rtl
+Verilog,2026Q1,28539,38,False,verilog,
 Scala,2026Q1,28457,38,False,scala,
 sed,2026Q1,27630,37,False,sed,sed
 Pascal,2026Q1,24479,38,True,delphi|objectpascal|pascal,delphi|pascal
@@ -200,8 +200,8 @@ CWeb,2026Q1,315,1,False,cweb,
 Ballerina,2026Q1,306,1,False,ballerina,ballerina
 Smali,2026Q1,305,2,False,smali,smali
 Asymptote,2026Q1,301,1,False,asymptote,
-Vyper,2026Q1,291,2,False,vyper,
 Objective-J,2026Q1,291,2,False,obj-j|objective-j|objectivej|objj,
+Vyper,2026Q1,291,2,False,vyper,
 Cycript,2026Q1,283,1,False,cycript,
 Modula-3,2026Q1,266,1,True,modula-3,
 Squirrel,2026Q1,256,1,False,squirrel,squirrel
@@ -212,8 +212,8 @@ Monkey C,2026Q1,241,1,False,monkey c|monkey-c,
 REXX,2026Q1,237,1,True,arexx|rexx,rexx
 LilyPond,2026Q1,231,1,False,lilypond,lilypond
 ZenScript,2026Q1,226,1,False,zenscript,
-mupad,2026Q1,222,1,False,mupad,
 AutoIt,2026Q1,222,1,False,au3|autoit|autoit3|autoitscript,
+mupad,2026Q1,222,1,False,mupad,
 Yul,2026Q1,211,1,False,yul,yul
 CLIPS,2026Q1,198,1,False,clips,
 WebIDL,2026Q1,198,1,False,webidl,
@@ -223,24 +223,24 @@ Clarion,2026Q1,191,1,False,clarion,
 Janet,2026Q1,191,1,False,janet,janet
 F*,2026Q1,190,1,False,f*|fstar,f*
 CartoCSS,2026Q1,189,1,False,carto|cartocss,
-Zeek,2026Q1,189,1,False,bro|zeek,bro
 LabVIEW,2026Q1,189,1,False,labview,
+Zeek,2026Q1,189,1,False,bro|zeek,bro
 mIRC Script,2026Q1,184,1,False,mirc script|mirc-script,
 Common Workflow Language,2026Q1,183,1,False,common workflow language|common-workflow-language|cwl,
 Fennel,2026Q1,181,1,False,fennel,fennel
 SQF,2026Q1,180,1,False,sqf,
 KRL,2026Q1,176,1,False,krl,krl
 Pike,2026Q1,169,1,False,pike,pike
-Nasal,2026Q1,168,1,False,nasal,nasal
 AspectJ,2026Q1,168,1,False,aspectj,
 Modula-2,2026Q1,168,1,True,modula-2,
-XC,2026Q1,164,1,False,xc,xc
+Nasal,2026Q1,168,1,False,nasal,nasal
 P4,2026Q1,164,1,False,p4,p4
+XC,2026Q1,164,1,False,xc,xc
 IGOR Pro,2026Q1,159,1,False,igor|igor pro|igor-pro|igorpro,
 Befunge,2026Q1,146,1,False,befunge,
 ZAP,2026Q1,146,1,False,zap,zap
-Nearley,2026Q1,144,1,False,nearley,
 Brightscript,2026Q1,144,1,False,brightscript,
+Nearley,2026Q1,144,1,False,nearley,
 XProc,2026Q1,140,1,False,xproc,
 PigLatin,2026Q1,139,1,False,piglatin,
 Csound Document,2026Q1,133,1,False,csound document|csound-csd|csound-document,
@@ -254,7 +254,7 @@ Dafny,2026Q1,122,1,False,dafny,dafny
 GCC Machine Description,2026Q1,116,1,False,gcc machine description|gcc-machine-description,
 MoonScript,2026Q1,116,1,False,moonscript,
 Csound,2026Q1,112,1,False,csound|csound-orc,csound
-BrighterScript,2026Q1,104,1,False,brighterscript,
 Bluespec,2026Q1,104,1,False,bluespec|bluespec bsv|bsv,bluespec|bsv
+BrighterScript,2026Q1,104,1,False,brighterscript,
 KakouneScript,2026Q1,104,1,False,kak|kakounescript|kakscript,kak
 Macaulay2,2026Q1,103,1,False,macaulay2,
