@@ -1,7 +1,7 @@
 # Analysis
 
 Working notes for the blog post. This redoes, for programming languages, the analysis
-of natural languages in Anna Korhonen's EMNLP 2025 keynote, "AI for the Many: Starting
+of natural languages in Anna Korhonen's EMNLP 2026 keynote, "AI for the Many: Starting
 from the World, Not the Model". The questions, figure designs and groupings all come
 from that talk (see the README for details). Method and definitions: [METHOD.md](METHOD.md).
 

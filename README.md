@@ -2,13 +2,13 @@
 
 How well are programming languages served by open AI models and datasets, relative to
 how many people write them? A programming-language version of Anna Korhonen's EMNLP
-2025 keynote analysis of natural languages on Hugging Face.
+2026 keynote analysis of natural languages on Hugging Face.
 
 ## Inspiration and credit
 
 This project is directly inspired by, and closely follows, the analysis in
-**Anna Korhonen's keynote at EMNLP 2025, "AI for the Many: Starting from the World,
-Not the Model"** (Keynote 3). The talk examined the global AI divide through the lens
+**Anna Korhonen's keynote at EMNLP 2026, "AI for the Many: Starting from the World,
+Not the Model"** (Keynote 3, 27 October 2026). The talk examined the global AI divide through the lens
 of language, showing how unevenly AI models and datasets are spread across the world's
 languages.
 

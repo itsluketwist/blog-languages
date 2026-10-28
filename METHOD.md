@@ -2,7 +2,7 @@
 
 How every number and figure in this repo is produced. The code is in `src/`, and all
 hand-curated lists and pinned sources are in `src/config.py`. The analysis and figure
-designs follow Anna Korhonen's EMNLP 2025 keynote, "AI for the Many: Starting from the
+designs follow Anna Korhonen's EMNLP 2026 keynote, "AI for the Many: Starting from the
 World, Not the Model"; where this method makes its own choices, they are described below.
 
 ```bash

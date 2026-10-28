@@ -60,7 +60,7 @@ KINDS = ("models", "datasets")
 
 # credit line on the figures that follow the keynote's slides
 CREDIT = (
-    "After Anna Korhonen's EMNLP 2025 keynote, "
+    "After Anna Korhonen's EMNLP 2026 keynote, "
     "“AI for the Many: Starting from the World, Not the Model”"
 )
 
