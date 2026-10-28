@@ -1,0 +1,260 @@
+language,period,developers,economies,legacy,hf_tags,ambiguous_tags
+JavaScript,2026Q1,5662372,181,False,javascript|js|node|nodejs,js|node
+Python,2026Q1,4109495,160,False,py|py3|python|python3|rusthon,py
+TypeScript,2026Q1,2787317,162,False,ts|typescript,ts
+Shell,2026Q1,2319832,151,False,bash|envrc|nl2bash|sh|shell|shell-commands|shell-script|zsh,bash|envrc|sh
+Java,2026Q1,1074838,134,False,java,
+C++,2026Q1,944644,135,False,c++|cplusplus|cpp,cpp
+C,2026Q1,907620,134,False,c|c-language|clang,c|clang
+Batchfile,2026Q1,627941,126,False,bat|batch|batchfile|dosbatch|winbatch,bat|batch
+C#,2026Q1,564606,120,False,c#|c-sharp|cake|cakescript|csharp|dotnet,c#|cake|cakescript|dotnet
+PHP,2026Q1,559093,134,False,php,
+PowerShell,2026Q1,515689,122,False,posh|powershell|pwsh,posh
+Kotlin,2026Q1,433614,127,False,kotlin,
+Ruby,2026Q1,421014,110,False,jruby|macruby|rake|rb|rbx|ruby,rake|rb|ruby
+Go,2026Q1,393708,101,False,go|golang,go
+Swift,2026Q1,377812,124,False,swift,swift
+SQL,2026Q1,375726,118,False,hiveql|mysql|nl2sql|pl-sql|plpgsql|plsql|postgresql|spider|sql|sqlite|sqlpl|t-sql|text-to-sql|text2sql|tsql,mysql|postgresql|spider|sqlite
+Rust,2026Q1,317919,92,False,rs|rust,rs|rust
+Objective-C,2026Q1,276290,113,False,obj-c|objc|objective-c|objectivec,
+Lua,2026Q1,249825,89,False,lua,lua
+Dart,2026Q1,209669,114,False,dart,dart
+Assembly,2026Q1,162573,78,False,asm|assembly|assembly-code|nasm,asm|assembly
+HCL,2026Q1,157665,74,False,hashicorp configuration language|hcl|opentofu|terraform,terraform
+Nix,2026Q1,156330,79,False,nix|nixos,nix
+Perl,2026Q1,138488,73,False,cperl|perl,
+R,2026Q1,123499,63,False,r|r-language|rscript|rstats|splus,r
+Mako,2026Q1,106690,80,False,mako,mako
+HLSL,2026Q1,102386,67,False,hlsl,
+GLSL,2026Q1,90547,65,False,glsl,
+ShaderLab,2026Q1,87553,66,False,shaderlab,
+XSLT,2026Q1,77128,62,False,xsl|xslt,xsl
+Smarty,2026Q1,76624,63,False,smarty,
+Vim Script,2026Q1,73238,52,False,vim script|vim-script,
+MATLAB,2026Q1,71342,54,False,matlab|octave,matlab
+Objective-C++,2026Q1,65930,59,False,obj-c++|objc++|objective-c++|objectivec++,
+Cython,2026Q1,64229,61,False,cython|pyrex,
+Fortran,2026Q1,54374,57,True,fortran,
+Solidity,2026Q1,53061,59,False,smart-contract|smart-contracts|solidity,
+Emacs Lisp,2026Q1,49148,47,False,cask|eask|elisp|emacs|emacs lisp|emacs-lisp,emacs
+Gherkin,2026Q1,48148,57,False,cucumber|gherkin,
+Starlark,2026Q1,46539,47,False,bazel|bzl|starlark,bzl
+Awk,2026Q1,46518,47,False,awk,awk
+Groovy,2026Q1,42608,48,False,groovy,
+GDScript,2026Q1,40237,50,False,gdscript,
+Tcl,2026Q1,39525,43,False,sdc|tcl|xdc,sdc|tcl|xdc
+Yacc,2026Q1,37073,44,False,yacc,yacc
+Lex,2026Q1,33816,45,False,flex|lex,flex|lex
+Julia,2026Q1,29225,36,False,julia,julia
+Verilog,2026Q1,28539,38,False,rtl|verilog|verilog-generation,rtl
+Scala,2026Q1,28457,38,False,scala,
+sed,2026Q1,27630,37,False,sed,sed
+Pascal,2026Q1,24479,38,True,delphi|objectpascal|pascal,delphi|pascal
+ANTLR,2026Q1,24250,33,False,antlr,
+Haskell,2026Q1,23803,37,False,haskell,
+QML,2026Q1,22886,37,False,qml,
+Pawn,2026Q1,21010,33,False,pawn,pawn
+Elixir,2026Q1,20646,36,False,elixir,
+RenderScript,2026Q1,20606,37,False,renderscript,
+SWIG,2026Q1,20368,28,False,swig,
+Scheme,2026Q1,18408,33,False,scheme,scheme
+Raku,2026Q1,17409,31,False,perl-6|perl6|raku,
+ASP.NET,2026Q1,16721,42,False,asp.net|aspx|aspx-vb,
+SmPL,2026Q1,16718,32,False,coccinelle|smpl,smpl
+FreeMarker,2026Q1,16670,26,False,freemarker|ftl,
+VBScript,2026Q1,16656,35,False,vbscript,
+Clojure,2026Q1,16547,29,False,clojure,
+AppleScript,2026Q1,15607,27,False,apples|applescript|osascript,
+Common Lisp,2026Q1,14666,28,True,common lisp|common-lisp|lisp,lisp
+SystemVerilog,2026Q1,14544,29,False,systemverilog,
+DTrace,2026Q1,14411,25,False,dtrace|dtrace-script,
+Gnuplot,2026Q1,14029,25,False,gnuplot,
+NASL,2026Q1,13960,25,False,nasl,
+Prolog,2026Q1,13830,31,True,prolog,prolog
+VHDL,2026Q1,13298,28,False,vhdl,
+Bicep,2026Q1,13140,23,False,bicep,
+OCaml,2026Q1,12869,24,False,ocaml,
+PureBasic,2026Q1,12294,29,False,purebasic,
+Zig,2026Q1,11348,25,False,zig,zig
+GAP,2026Q1,10437,21,False,gap,gap
+LLVM,2026Q1,10007,21,False,llvm,llvm
+D,2026Q1,9879,23,False,d|dlang,d
+AMPL,2026Q1,9875,21,False,ampl,ampl
+Erlang,2026Q1,9852,21,False,erlang,
+DIGITAL Command Language,2026Q1,9847,22,False,digital command language|digital-command-language,
+CoffeeScript,2026Q1,9823,24,True,coffee|coffee-script|coffeescript,coffee
+XS,2026Q1,9360,23,False,xs,xs
+AIDL,2026Q1,9122,25,False,aidl,
+Smalltalk,2026Q1,8825,22,True,smalltalk|squeak,
+Standard ML,2026Q1,8384,20,False,sml|standard ml|standard-ml,sml
+Visual Basic .NET,2026Q1,8133,24,False,vb .net|vb.net|vbnet|visual basic|visual basic .net|visual-basic-.net,
+UnrealScript,2026Q1,8006,20,False,unrealscript,
+F#,2026Q1,7936,23,False,f#|fsharp,f#
+Jsonnet,2026Q1,7840,19,False,jsonnet,
+jq,2026Q1,7804,18,False,jq,jq
+Scilab,2026Q1,7316,19,False,scilab,
+Mathematica,2026Q1,7216,22,False,mathematica,mathematica
+Thrift,2026Q1,6939,16,False,thrift,
+Nim,2026Q1,6713,17,False,nim,nim
+Forth,2026Q1,6371,20,True,forth,forth
+Open Policy Agent,2026Q1,6220,15,False,open policy agent|open-policy-agent,
+Stata,2026Q1,6169,20,False,stata,stata
+AutoHotkey,2026Q1,5649,19,False,ahk|autohotkey,ahk
+Processing,2026Q1,5540,16,False,processing,processing
+RobotFramework,2026Q1,5522,14,False,robotframework,
+CUE,2026Q1,5267,13,False,cue,cue
+MLIR,2026Q1,4895,14,False,mlir,mlir
+Racket,2026Q1,4844,13,False,racket,racket
+Nu,2026Q1,4671,13,False,nu|nush,nu
+POV-Ray SDL,2026Q1,4533,14,False,pov-ray|pov-ray sdl|pov-ray-sdl|povray,
+ASL,2026Q1,4507,15,False,asl,asl
+Lean,2026Q1,4432,11,False,lean|lean-4|lean3|lean4,lean
+COBOL,2026Q1,4232,11,True,cobol,
+Elvish,2026Q1,4230,11,False,elvish,elvish
+Ada,2026Q1,3949,11,True,ada|ada2005|ada95,ada
+Cap'n Proto,2026Q1,3795,13,False,cap'n proto|cap'n-proto,
+OpenSCAD,2026Q1,3696,9,False,openscad,
+PureScript,2026Q1,3590,10,False,purescript,
+Nextflow,2026Q1,3540,10,False,nextflow,
+Jasmin,2026Q1,3533,10,False,jasmin,jasmin
+Boogie,2026Q1,3308,9,False,boogie,boogie
+Puppet,2026Q1,3020,9,False,puppet,puppet
+SourcePawn,2026Q1,3007,11,False,sourcemod|sourcepawn,
+Visual Basic 6.0,2026Q1,2844,10,True,classic visual basic|vb 6|vb6|visual basic 6|visual basic 6.0|visual basic classic|visual-basic-6.0,
+RouterOS Script,2026Q1,2841,9,False,routeros script|routeros-script,
+PEG.js,2026Q1,2821,8,False,peg.js,
+Classic ASP,2026Q1,2791,9,True,asp|classic asp|classic-asp,asp
+Agda,2026Q1,2712,7,False,agda,agda
+ReScript,2026Q1,2654,8,False,rescript,
+SAS,2026Q1,2571,9,False,sas,sas
+Mercury,2026Q1,2540,9,False,mercury,mercury
+G-code,2026Q1,2457,7,False,g-code,
+Cypher,2026Q1,2393,8,False,cypher,
+Game Maker Language,2026Q1,2122,6,False,game maker language|game-maker-language,
+OpenEdge ABL,2026Q1,2043,7,False,abl|openedge|openedge abl|openedge-abl|progress,abl
+EmberScript,2026Q1,1993,8,False,emberscript,
+ActionScript,2026Q1,1934,7,True,actionscript|actionscript 3|actionscript3|as3,
+Haxe,2026Q1,1928,7,False,haxe,haxe
+VBA,2026Q1,1911,8,True,vba|visual basic for applications,
+AGS Script,2026Q1,1791,6,False,ags|ags script|ags-script,ags
+Motoko,2026Q1,1709,2,False,motoko,motoko
+Elm,2026Q1,1675,6,False,elm,elm
+DM,2026Q1,1635,4,False,byond|dm,dm
+TXL,2026Q1,1575,5,False,txl,txl
+Ragel,2026Q1,1515,7,False,ragel|ragel-rb|ragel-ruby,
+CAP CDS,2026Q1,1404,4,False,cap cds|cap-cds|cds,cds
+Brainfuck,2026Q1,1364,6,False,brainfuck,
+YARA,2026Q1,1302,5,False,yara,
+JetBrains MPS,2026Q1,1270,5,False,jetbrains mps|jetbrains-mps,
+mcfunction,2026Q1,1230,6,False,mcfunction,
+NewLisp,2026Q1,1185,5,False,newlisp,
+Rebol,2026Q1,1130,5,False,rebol,
+MAXScript,2026Q1,1128,4,False,maxscript,
+Terra,2026Q1,1115,5,False,terra,terra
+IDL,2026Q1,1086,4,False,idl,idl
+Portugol,2026Q1,1082,1,False,portugol,
+ABAP,2026Q1,998,4,True,abap,
+Witcher Script,2026Q1,985,4,False,witcher script|witcher-script,
+BASIC,2026Q1,979,4,True,basic,basic
+SuperCollider,2026Q1,915,4,False,supercollider,supercollider
+1C Enterprise,2026Q1,818,2,False,1c enterprise|1c-enterprise,
+xBase,2026Q1,799,4,False,advpl|clipper|foxpro|xbase,
+Qt Script,2026Q1,796,5,False,qt script|qt-script,
+ImageJ Macro,2026Q1,781,4,False,ijm|imagej macro|imagej-macro,
+Crystal,2026Q1,780,4,False,crystal,crystal
+Vala,2026Q1,776,3,False,vala,vala
+TLA,2026Q1,764,2,False,tla,tla
+Clarity,2026Q1,746,1,False,clarity,clarity
+PDDL,2026Q1,731,4,False,pddl,
+CodeQL,2026Q1,714,1,False,codeql|ql,ql
+Odin,2026Q1,682,3,False,odin|odin-lang|odinlang,odin
+VCL,2026Q1,681,4,False,vcl,
+ECL,2026Q1,670,4,False,ecl,ecl
+Promela,2026Q1,662,4,False,promela,
+SMT,2026Q1,654,3,False,smt,smt
+Gleam,2026Q1,618,3,False,gleam,gleam
+eC,2026Q1,609,3,False,ec,ec
+Papyrus,2026Q1,585,4,False,papyrus,papyrus
+Cairo,2026Q1,564,3,False,cairo,
+nesC,2026Q1,508,1,False,nesc,
+ColdFusion,2026Q1,497,2,False,cfm|cfml|coldfusion|coldfusion html,cfm
+NCL,2026Q1,451,1,False,ncl,ncl
+SaltStack,2026Q1,432,3,False,saltstack,
+Kaitai Struct,2026Q1,419,1,False,kaitai struct|kaitai-struct|ksy,ksy
+Xtend,2026Q1,417,3,False,xtend,
+GSC,2026Q1,410,2,False,gsc,
+Isabelle,2026Q1,408,3,False,isabelle,
+LookML,2026Q1,403,2,False,lookml,
+XQuery,2026Q1,402,3,False,xquery,
+Modelica,2026Q1,394,3,False,modelica,modelica
+Smithy,2026Q1,393,2,False,smithy,
+Sieve,2026Q1,375,3,False,sieve,sieve
+DenizenScript,2026Q1,374,1,False,denizenscript,
+Q#,2026Q1,351,1,False,q#|qsharp,q#
+OpenQASM,2026Q1,344,1,False,openqasm,
+Xonsh,2026Q1,343,1,False,xonsh,
+Lasso,2026Q1,342,2,False,lasso|lassoscript,lasso
+Ren'Py,2026Q1,328,1,False,ren'py|renpy,renpy
+AngelScript,2026Q1,317,1,False,angelscript,
+CWeb,2026Q1,315,1,False,cweb,
+Ballerina,2026Q1,306,1,False,ballerina,ballerina
+Smali,2026Q1,305,2,False,smali,smali
+Asymptote,2026Q1,301,1,False,asymptote,
+Vyper,2026Q1,291,2,False,vyper,
+Objective-J,2026Q1,291,2,False,obj-j|objective-j|objectivej|objj,
+Cycript,2026Q1,283,1,False,cycript,
+Modula-3,2026Q1,266,1,True,modula-3,
+Squirrel,2026Q1,256,1,False,squirrel,squirrel
+LiveScript,2026Q1,253,1,False,live-script|livescript|ls,ls
+Eiffel,2026Q1,250,1,True,eiffel,eiffel
+ABAP CDS,2026Q1,243,1,False,abap cds|abap-cds,
+Monkey C,2026Q1,241,1,False,monkey c|monkey-c,
+REXX,2026Q1,237,1,True,arexx|rexx,rexx
+LilyPond,2026Q1,231,1,False,lilypond,lilypond
+ZenScript,2026Q1,226,1,False,zenscript,
+mupad,2026Q1,222,1,False,mupad,
+AutoIt,2026Q1,222,1,False,au3|autoit|autoit3|autoitscript,
+Yul,2026Q1,211,1,False,yul,yul
+CLIPS,2026Q1,198,1,False,clips,
+WebIDL,2026Q1,198,1,False,webidl,
+LSL,2026Q1,193,1,False,lsl,lsl
+Augeas,2026Q1,192,1,False,augeas,
+Clarion,2026Q1,191,1,False,clarion,
+Janet,2026Q1,191,1,False,janet,janet
+F*,2026Q1,190,1,False,f*|fstar,f*
+CartoCSS,2026Q1,189,1,False,carto|cartocss,
+Zeek,2026Q1,189,1,False,bro|zeek,bro
+LabVIEW,2026Q1,189,1,False,labview,
+mIRC Script,2026Q1,184,1,False,mirc script|mirc-script,
+Common Workflow Language,2026Q1,183,1,False,common workflow language|common-workflow-language|cwl,
+Fennel,2026Q1,181,1,False,fennel,fennel
+SQF,2026Q1,180,1,False,sqf,
+KRL,2026Q1,176,1,False,krl,krl
+Pike,2026Q1,169,1,False,pike,pike
+Nasal,2026Q1,168,1,False,nasal,nasal
+AspectJ,2026Q1,168,1,False,aspectj,
+Modula-2,2026Q1,168,1,True,modula-2,
+XC,2026Q1,164,1,False,xc,xc
+P4,2026Q1,164,1,False,p4,p4
+IGOR Pro,2026Q1,159,1,False,igor|igor pro|igor-pro|igorpro,
+Befunge,2026Q1,146,1,False,befunge,
+ZAP,2026Q1,146,1,False,zap,zap
+Nearley,2026Q1,144,1,False,nearley,
+Brightscript,2026Q1,144,1,False,brightscript,
+XProc,2026Q1,140,1,False,xproc,
+PigLatin,2026Q1,139,1,False,piglatin,
+Csound Document,2026Q1,133,1,False,csound document|csound-csd|csound-document,
+ChucK,2026Q1,131,1,False,chuck,chuck
+Dhall,2026Q1,130,1,False,dhall,
+Harbour,2026Q1,130,1,False,harbour,
+GAMS,2026Q1,128,1,False,gams,gams
+Idris,2026Q1,126,1,False,idris,idris
+RPGLE,2026Q1,124,1,True,ile rpg|rpgle|sqlrpgle,
+Dafny,2026Q1,122,1,False,dafny,dafny
+GCC Machine Description,2026Q1,116,1,False,gcc machine description|gcc-machine-description,
+MoonScript,2026Q1,116,1,False,moonscript,
+Csound,2026Q1,112,1,False,csound|csound-orc,csound
+BrighterScript,2026Q1,104,1,False,brighterscript,
+Bluespec,2026Q1,104,1,False,bluespec|bluespec bsv|bsv,bluespec|bsv
+KakouneScript,2026Q1,104,1,False,kak|kakounescript|kakscript,kak
+Macaulay2,2026Q1,103,1,False,macaulay2,
