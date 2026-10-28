@@ -26,7 +26,7 @@ from scipy import stats
 from config import DATA, DEDICATED_MAX_LANGUAGES, FIGURES, PERIOD
 
 # colours: one neutral for the bulk, three hues for the highlighted groups
-SURFACE = "#fcfcfb"
+SURFACE = "#f5fafd"
 INK = "#0b0b0b"
 INK_2 = "#52514e"
 GRID = "#e4e3df"
