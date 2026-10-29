@@ -58,9 +58,9 @@ plt.rcParams.update(
 
 KINDS = ("models", "datasets")
 
-# credit line on the figures that follow the keynote's slides
-CREDIT = (
-    "After Anna Korhonen's EMNLP 2026 keynote, "
+# the keynote these figures credit, each figure says how it relates to it
+KEYNOTE = (
+    "Anna Korhonen's EMNLP 2026 keynote, "
     "“AI for the Many: Starting from the World, Not the Model”"
 )
 
@@ -110,12 +110,13 @@ def by_count(
 
 def add_credit(
     fig: plt.Figure,
+    lead: str = "Adapted from",
 ) -> None:
-    """Write the keynote credit line along the bottom-right of a figure."""
+    """Write the keynote credit line along the bottom-right of a figure, starting with lead."""
     fig.text(
         0.995,
         -0.01,
-        CREDIT,
+        f"{lead} {KEYNOTE}",
         ha="right",
         va="top",
         fontsize=8.5,
@@ -486,6 +487,8 @@ def share_figure(
         loc="left",
     )
     fig.tight_layout()
+    # this plot isn't from the keynote's slides, only the analysis idea is
+    add_credit(fig, lead="Analysis inspired by")
     fig.savefig(FIGURES / "share.png")
     plt.close(fig)
 
