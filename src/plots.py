@@ -70,6 +70,13 @@ Fit = stats._stats_py.LinregressResult
 # zero counts can't go on a log scale, so where needed they are treated as this
 ZERO_AS = 0.5
 
+# languages ranked far higher on the zipf plot than their developer count suggests,
+# with why, and where (axes fraction) each note sits so it avoids the other labels
+ZIPF_NOTES = {
+    "SQL": ("SQL: kept high by the\ntext-to-SQL task", (0.40, 0.95)),
+    "Lean": ("Lean: very few developers,\nbut lots of recent AI hype", (0.04, 0.62)),
+}
+
 
 def gini(
     values: np.ndarray,
@@ -174,7 +181,7 @@ def zipf_panel(
         linewidth=1.5,
     )
 
-    # label the top 8 languages
+    # label the top 8 languages, except those that get a note below
     texts = [
         ax.text(
             r["rank"],
@@ -185,9 +192,25 @@ def zipf_panel(
             color=INK,
         )
         for _, r in d.head(8).iterrows()
+        if r.language not in ZIPF_NOTES
     ]
     ax.set_xscale("log")
     ax.set_yscale("log")
+
+    # explain the oddly high languages with a note and an arrow
+    for language, (note, xytext) in ZIPF_NOTES.items():
+        r = d[d.language == language].iloc[0]
+        ax.annotate(
+            note,
+            (r["rank"], r[kind]),
+            xytext=xytext,
+            textcoords="axes fraction",
+            va="top",
+            fontsize=10,
+            fontweight="bold",
+            color=TOP,
+            arrowprops=dict(arrowstyle="-|>", color=TOP, lw=1.2),
+        )
     adjust_text(
         texts,
         x=d["rank"].to_numpy(),
@@ -196,7 +219,7 @@ def zipf_panel(
         arrowprops=dict(arrowstyle="-", color=INK_2, lw=0.5),
     )
     loglog_grid(ax)
-    ax.set_xlabel("Rank (log)")
+    ax.set_xlabel(f"Language rank by number of {kind} (log)")
     ax.set_ylabel(f"Number of {kind} (log)")
     ax.set_title(f"Hugging Face {kind} per programming language")
     ax.legend(loc="lower left", frameon=False, fontsize=9)

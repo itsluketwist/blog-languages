@@ -152,7 +152,9 @@ Computed separately for models and for datasets ("count" below):
 ## 5. Figures — `plots.py` → `figures/`
 
 - **`zipf.png`:** rank vs. count, log-log, for models (left) and datasets (right), with
-  the Zipf fit dashed and the top 8 labelled.
+  the Zipf fit dashed and the top 8 labelled. SQL and Lean get notes explaining why
+  they rank so high: SQL is lifted by the text-to-SQL task, and Lean has very few
+  developers but lots of recent AI theorem-proving attention.
   - The callout is the language with the most developers per model among those with
     ≥100k developers and ≥1 model (Perl).
 - **`developers_vs_models.png`** and **`developers_vs_datasets.png`:** developers (x)
